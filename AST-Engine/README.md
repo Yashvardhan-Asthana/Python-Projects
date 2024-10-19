@@ -96,6 +96,7 @@ The response body would be the AST Node of the newly created rule (i.e, AST node
        "operator": "AND", 
        "combined_rule_name": "rule3"
    }
+   ```
 
 if you want to perform AND operation between "rule1" and "rule2" and rename the newly combined rule as "rule3"
 
@@ -113,6 +114,7 @@ The response body would be the AST Node of the newly combined rule (i.e, AST nod
            "experience": 6
        }
    }
+   ```
 
 if you want to evaluate rule3 for the input data: data = {"age": 35, "department": "Sales", "salary": 60000, "experience": 6}
 
