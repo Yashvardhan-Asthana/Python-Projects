@@ -43,45 +43,45 @@ To run the project, ensure the following libraries and software are installed:
        "rule_name": "rule1",
        "rule_expression": "age > 18"
    }
--
+   ```
+
    ```json
    {
        "rule_name": "rule1",
        "rule_expression": "(age > 18 AND salary > 20000)"
    }
--
+   ```
 
    ```json
    {
        "rule_name": "rule1",
        "rule_expression": "((age > 21 AND salary > 30000) OR experience > 5)"
    }
--
+   ```
 
    ```json
    {
        "rule_name": "rule1",
        "rule_expression": "((age > 21 AND salary > 30000) OR (experience > 5 AND rating > 4))"
    }
--
+   ```
+
 
     ```json
    {
        "rule_name": "rule1",
        "rule_expression": "(((age > 21 AND salary > 30000) OR (experience > 5 AND rating > 4)) AND education == 'Bachelor')"
    }
--
+    ```
+
 
     ```json
    {
        "rule_name": "rule1",
        "rule_expression": "(((age > 21 AND salary > 30000) OR (experience > 5 AND rating > 4)) AND (education == 'Bachelor' OR degree == 'Master'))
    }
-  
----
+    ```
 
-if the rule is:
-rule1 = "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
 
 The response body would be the AST Node of the newly created rule (i.e, AST node of rule1 in this case).
 
