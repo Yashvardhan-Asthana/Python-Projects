@@ -124,6 +124,6 @@ if you want to evaluate rule3 for the input data: data = {"age": 35, "department
 
 The response body would be either "True" or "False" with the rule name which has been evaluated.
 
-**Note-4:** We have not stored the created or combined rules in any database or permanent storage in order to reduce the code complexity and was not even required in the assignment anyways. Therefore, all rules are stored temporarily and will be lost once the program execution stops.
+**Note-4:** We have not stored the created or combined rules in any database or permanent storage to keep the code simpler, as this was not a requirement in the assignment. Therefore, all rules are stored temporarily and will be lost once the program execution stops.
 
 ---
