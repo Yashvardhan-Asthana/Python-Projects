@@ -102,6 +102,8 @@ The response body would be the AST Node of the newly created rule (i.e, AST node
 
 if you want to perform AND operation between "rule1" and "rule2" and rename the newly combined rule as "rule3"
 
+**Note-3:** It will give the message 'rulex' already exists if you try to combine two rules and name them 'rulex', which has already been used for another combined rule.
+
 The response body would be the AST Node of the newly combined rule (i.e, AST node of rule3 in this case).
 
 7. For rule evaluation, use the POST method and your URL would probably look like `http://127.0.0.1:5000/evaluate_rule` with the request body as:
@@ -122,6 +124,6 @@ if you want to evaluate rule3 for the input data: data = {"age": 35, "department
 
 The response body would be either "True" or "False" with the rule name which has been evaluated.
 
-**Note:** We have not stored the created or combined rules in any database or permanent storage in order to reduce code complexity, as this was not required in the assignment anyways. Therefore, all rules are stored temporarily and will be lost once the program execution stops.
+**Note-4:** We have not stored the created or combined rules in any database or permanent storage in order to reduce code complexity, as this was not required in the assignment anyways. Therefore, all rules are stored temporarily and will be lost once the program execution stops.
 
 ---
