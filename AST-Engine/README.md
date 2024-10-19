@@ -41,13 +41,15 @@ To run the project, ensure the following libraries and software are installed:
    ```json
    {
        "rule_name": "rule1",
-       "rule_expression": "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
+       "rule_expression": "(((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5))"
    }
 
 if the rule is:
 rule1 = "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
 
 The response body would be the AST Node of the newly created rule (i.e, AST node of rule1 in this case).
+
+**Note:** Place the parenthesis correctly while creating rules just as shown above. You have to place a default parenthesis within double inverted commas around the whole expression or else the parse_token function won't be able to process the entire expression.
 
 6. For rule combination, use the POST method, and your URL would probably look like `http://127.0.0.1:5000/combine_rule` with the request body as:
 
