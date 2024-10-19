@@ -78,4 +78,6 @@ To run this project, you need the following libraries and software:
    ```bash
    python project_name.py
 
+As the program executes, it will fetch weather data every 5 minutes using the OpenWeather API, store it in the database, and continuously plot a graph to display the weather information of six metro cities each time the API runs.
+
 ---
