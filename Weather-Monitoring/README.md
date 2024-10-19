@@ -76,6 +76,6 @@ To run this project, you need the following libraries and software:
 3. **Clone the project source code** and name it as per your need with `.py` extension.
 4. **Run the source code** script in your preferred Python IDE or through the terminal:
    ```bash
-   python app.py
+   python project_name.py
 
 ---
