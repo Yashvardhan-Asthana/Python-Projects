@@ -151,8 +151,8 @@ def main(db_path):
         else:
             print("No data fetched. Skipping this cycle.")
         
-        # Wait for 5 minutes before fetching again
-        time.sleep(5)  # 5 minutes
+        # Wait for 5 seconds before fetching again
+        time.sleep(5)  # Can be changed to 5 minutes or more
         
         # Plot the weather trends for all cities
         plot_all_cities_trends(db_path)
