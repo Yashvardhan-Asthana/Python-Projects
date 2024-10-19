@@ -5,7 +5,7 @@
 The `Weather Monitoring` project is a Python-based application that fetches and monitors real-time weather data for six major metro cities in India: Delhi, Mumbai, Chennai, Bengaluru, Kolkata, and Hyderabad. The project fetches weather data from the OpenWeatherMap API and stores it in a local SQLite database for analysis and visualization.
 
 ### Key Features:
-- **Real-Time Weather Data:** Fetches the current weather details such as average temperature, minimum temperature, maximum temperature, and dominant weather condition for each city at a configurable interval of 5 minutes.
+- **Real-Time Weather Data:** Fetches the current weather details such as average temperature, minimum temperature, maximum temperature, and dominant weather condition for each city continously at a configurable interval of 5 seconds (time interval can be changed to 5 minutes or more).
 - **Alerts:** Generates alerts if the average temperature of any city exceeds a predefined threshold which is set to 35°C currently.
 - **Data Storage:** Saves weather data into a local SQLite database for future retrieval and analysis.
 - **Temperature Trend Visualization:** Plots the temperature trends for all cities over time using `matplotlib`.
@@ -78,6 +78,8 @@ To run this project, you need the following libraries and software:
    ```bash
    python project_name.py
 
-As the program executes, it will fetch weather data every 5 minutes using the OpenWeather API, store it in the database, and continuously plot a graph to display the weather information of six metro cities each time the API runs.
+As the program executes, it will fetch weather data after every 5 seconds using the OpenWeather API, process the city, avg_temp, max_temp, min_temp, dominant_condition and timestamp and store all the data in the table named `weather_data` inside the database `weather.db`.
+
+The program will continuously plot a graph to display the `average temperature vs timestamp` of six metro cities each time the API runs.
 
 ---
