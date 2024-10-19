@@ -29,7 +29,7 @@ def init_db(db_path):
 def fetch_data_for_cities(api_key, cities):
     raw_data = {}
     for city in cities:
-        print(f"Fetching weather data for {city}...")
+        print(f"\nFetching weather data for {city}...")
         response = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric")
         if response.status_code == 200:
             print("Data fetched Successfully")
