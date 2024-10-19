@@ -35,7 +35,15 @@ To run the project, ensure the following libraries and software are installed:
 2. Make sure all the required libraries, modules and software such as Python and Postman is installed.
 3. Run the python file.
 4. If your code is running successfully on the default 5000 port then you can use this url: http://127.0.0.1:5000/{API_Endpoint} where the API_Endpoint would be 'create_rule' for rule creation, 'combine_rule' for rule combination, and 'evaluate_rule' for rule evaluation.
-5. For rule creation, use the POST method and your url would probably look like 'http://127.0.0.1:5000/create_rule' with the request body as:
+5. For rule creation, use the POST method and your URL would probably look like `http://127.0.0.1:5000/create_rule` with the request body as:
+
+   ```json
+   {
+       "rule_name": "rule1",
+       "rule_expression": "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
+   }
+
+6. For rule creation, use the POST method and your url would probably look like 'http://127.0.0.1:5000/create_rule' with the request body as:
    {
     "rule_name": "rule1",
     "rule_expression": "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
