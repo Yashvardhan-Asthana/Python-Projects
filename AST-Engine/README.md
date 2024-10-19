@@ -27,7 +27,7 @@ To run the project, ensure the following libraries and software are installed:
   
   ```bash
   pip install Flask
-- **Postman**: Version 11.x
+- **Postman**: A tool for testing APIs.
 
 ## How to execute the project
 
@@ -35,7 +35,8 @@ To run the project, ensure the following libraries and software are installed:
 2. Make sure all the required libraries, modules and software such as Python and Postman is installed.
 3. Run the python file.
 4. If your code is running successfully on the default 5000 port then you can use this url: http://127.0.0.1:5000/{API_Endpoint} where the API_Endpoint would be 'create_rule' for rule creation, 'combine_rule' for rule combination, and 'evaluate_rule' for rule evaluation.
-5. For rule creation, use the POST method and your URL would probably look like `http://127.0.0.1:5000/create_rule` with the request body as:
+
+5. For rule creation, use the POST method, and your URL would probably look like `http://127.0.0.1:5000/create_rule` with the request body as:
 
    ```json
    {
@@ -43,33 +44,36 @@ To run the project, ensure the following libraries and software are installed:
        "rule_expression": "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
    }
 
-6. For rule creation, use the POST method and your url would probably look like 'http://127.0.0.1:5000/create_rule' with the request body as:
-   {
-    "rule_name": "rule1",
-    "rule_expression": "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
-}
 if the rule is:
 rule1 = "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
 The response body would be the AST Node of the newly created rule (i.e, AST node of rule1 in this case).
-7. For rule combination, use the POST method and your url would probably look like 'http://127.0.0.1:5000/evaluate_rule' with the request body as:
+
+6. For rule combination, use the POST method, and your URL would probably look like `http://127.0.0.1:5000/combine_rule` with the request body as:
+
+   ```json
    {
-   "rule_name1": "rule1",
-   "rule_name2": "rule2",
-   "operator": "AND", 
-   "combined_rule_name": "rule3"
-}
+       "rule_name1": "rule1",
+       "rule_name2": "rule2",
+       "operator": "AND", 
+       "combined_rule_name": "rule3"
+   }
+
 if you want to perform AND operation between "rule1" and "rule2" and rename the newly combined rule as "rule3"
 The response body would be the AST Node of the newly combined rule (i.e, AST node of rule3 in this case).
-9. For rule evaluation, use the POST method and your url would probably look like 'http://127.0.0.1:5000/evaluate_rule' with the request body as:
+
+7. For rule evaluation, use the POST method and your URL would probably look like `http://127.0.0.1:5000/evaluate_rule` with the request body as:
+
+   ```json
    {
-   "rule_name": "rule3",
-   "data": {
-       "age": 35,
-       "department": "Sales",
-       "salary": 60000,
-       "experience": 6
+       "rule_name": "rule3",
+       "data": {
+           "age": 35,
+           "department": "Sales",
+           "salary": 60000,
+           "experience": 6
+       }
    }
-}
+
 if you want to evaluate rule3 for the input data: data = {"age": 35, "department": "Sales", "salary": 60000, "experience": 6}
 The response body would be either "True" or "False" with the rule name which has been evaluated.
 
