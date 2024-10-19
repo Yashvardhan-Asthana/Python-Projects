@@ -47,13 +47,15 @@ def tokenize_rule(rule_str):
 def parse_tokens(tokens):
     def parse_expression(index):
         if tokens[index] == '(':
+            # Parse everything inside the parentheses
             left_node, index = parse_expression(index + 1)
             operator = tokens[index]
             right_node, index = parse_expression(index + 1)
-            assert tokens[index] == ')', "Mismatched parentheses"
+            if tokens[index] != ')':
+                raise ValueError("Mismatched parentheses")  # Added for error checking
             return Node(node_type="operator", value=operator, left=left_node, right=right_node), index + 1
         else:
-            # This is an operand node (e.g., age > 30)
+            # Parse operand (e.g., salary > 50000)
             expr = []
             while index < len(tokens) and tokens[index] not in [')', 'AND', 'OR']:
                 expr.append(tokens[index])
