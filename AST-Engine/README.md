@@ -85,7 +85,9 @@ To run the project, ensure the following libraries and software are installed:
 
 The response body would be the AST Node of the newly created rule (i.e, AST node of rule1 in this case).
 
-**Note:** Please be very careful when placing parentheses while creating the rule expression. If there is no operator and only an operand, do not place parentheses. In simple words, parentheses will be used only if your rule expression has operator involved in between the two operands. Don't use parentheses if there is only one operand. Incorrect placement of parentheses won't be processed by the parse_tokens function correctly which will cause IndexError or ValueError. You can refer the above provided json code to create expressions easily.
+**Note-1:** Please be very careful when placing parentheses while creating the rule expression. If there is no operator and only an operand, do not place parentheses. In simple words, parentheses will be used only if your rule expression has operator involved in between the two operands. Don't use parentheses if there is only one operand. Incorrect placement of parentheses won't be processed by the parse_tokens function correctly which will cause IndexError or ValueError. You can refer the above provided json code to create expressions easily.
+
+**Note-2:** If you create two rule expressions with the same name, the latest rule expression will override the previous one.
 
 6. For rule combination, use the POST method, and your URL would probably look like `http://127.0.0.1:5000/combine_rule` with the request body as:
 
