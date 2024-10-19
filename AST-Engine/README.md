@@ -46,6 +46,7 @@ To run the project, ensure the following libraries and software are installed:
 
 if the rule is:
 rule1 = "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
+
 The response body would be the AST Node of the newly created rule (i.e, AST node of rule1 in this case).
 
 6. For rule combination, use the POST method, and your URL would probably look like `http://127.0.0.1:5000/combine_rule` with the request body as:
@@ -59,6 +60,7 @@ The response body would be the AST Node of the newly created rule (i.e, AST node
    }
 
 if you want to perform AND operation between "rule1" and "rule2" and rename the newly combined rule as "rule3"
+
 The response body would be the AST Node of the newly combined rule (i.e, AST node of rule3 in this case).
 
 7. For rule evaluation, use the POST method and your URL would probably look like `http://127.0.0.1:5000/evaluate_rule` with the request body as:
@@ -75,6 +77,7 @@ The response body would be the AST Node of the newly combined rule (i.e, AST nod
    }
 
 if you want to evaluate rule3 for the input data: data = {"age": 35, "department": "Sales", "salary": 60000, "experience": 6}
+
 The response body would be either "True" or "False" with the rule name which has been evaluated.
 
 Note: We have not stored the created or combined rules in any database or any permanent storage so to reduce the code complexity and it has not been asked either to do so. Therefore, all the rules are stored temporarily and will get lost once the program execution stops.
