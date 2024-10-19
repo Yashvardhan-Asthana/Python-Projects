@@ -78,7 +78,7 @@ To run the project, ensure the following libraries and software are installed:
     ```json
    {
        "rule_name": "rule1",
-       "rule_expression": "(((age > 21 AND salary > 30000) OR (experience > 5 AND rating > 4)) AND (education == 'Bachelor' OR degree == 'Master'))
+       "rule_expression": "(((age > 21 AND salary > 30000) OR (experience > 5 AND rating > 4)) AND (education == 'Bachelor' OR degree == 'Master'))"
    }
     ```
 
