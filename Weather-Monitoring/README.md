@@ -73,7 +73,8 @@ To run this project, you need the following libraries and software:
 
 1. **Install the required libraries** using the provided `pip install` commands.
 2. **Set up the OpenWeatherMap API Key** in the code (`main` function) where `API_KEY` is defined.
-3. **Run the `weather_monitoring.py`** script in your preferred Python IDE or through the terminal:
+3. **Clone the project source code** and name it as per your need with `.py` extension.
+4. **Run the source code** script in your preferred Python IDE or through the terminal:
    ```bash
    python app.py
 
