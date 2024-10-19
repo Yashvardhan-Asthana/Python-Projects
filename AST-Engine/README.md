@@ -34,7 +34,7 @@ To run the project, ensure the following libraries and software are installed:
 1. Clone the project in your system.
 2. Make sure all the required libraries, modules and software such as Python and Postman is installed.
 3. Run the python file.
-4. If your code is running successfully on the default 5000 port then you can use this url: http://127.0.0.1:5000/{API_Endpoint} where the API_Endpoint would be 'create_rule' for rule creation, 'combine_rule' for rule combination, and 'evaluate_rule' for rule evaluation.
+4. If your code is running successfully on the default 5000 port then you can use this url: `http://127.0.0.1:5000/{API_Endpoint}` where the API_Endpoint would be 'create_rule' for rule creation, 'combine_rule' for rule combination, and 'evaluate_rule' for rule evaluation.
 
 5. For rule creation, use the POST method, and your URL would probably look like `http://127.0.0.1:5000/create_rule` with the request body as:
 
