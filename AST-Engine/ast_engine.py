@@ -1,7 +1,7 @@
 import re
 from flask import Flask, request, jsonify
 
-app = Flask(__name__)  # Corrected
+app = Flask(__name__)  
 
 # Simulated in-memory database to store the rules
 database = {}
@@ -135,5 +135,5 @@ def evaluate_rule():
 
     return jsonify({"result": result, "message": f"Evaluated rule {rule_name}"}), 200
 
-if __name__ == '__main__':  # Corrected
+if __name__ == '__main__':  
     app.run(debug=True)
