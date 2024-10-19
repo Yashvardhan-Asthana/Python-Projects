@@ -34,22 +34,58 @@ To run the project, ensure the following libraries and software are installed:
 1. Clone the project in your system.
 2. Make sure all the required libraries, modules and software such as Python and Postman is installed.
 3. Run the python file.
-4. If your code is running successfully on the default 5000 port then you can use this url: `http://127.0.0.1:5000/{API_Endpoint}` where the API_Endpoint would be 'create_rule' for rule creation, 'combine_rule' for rule combination, and 'evaluate_rule' for rule evaluation.
+4. If your code runs successfully then your editor will give you the url on which the code is running. The default port is 5000 so your url would probably look like: `http://127.0.0.1:5000/{API_Endpoint}` where the API_Endpoint would be 'create_rule' for rule creation, 'combine_rule' for rule combination, and 'evaluate_rule' for rule evaluation.
 
 5. For rule creation, use the POST method, and your URL would probably look like `http://127.0.0.1:5000/create_rule` with the request body as:
 
    ```json
    {
        "rule_name": "rule1",
-       "rule_expression": "(((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5))"
+       "rule_expression": "age > 18"
    }
+-
+   ```json
+   {
+       "rule_name": "rule1",
+       "rule_expression": "(age > 18 AND salary > 20000)"
+   }
+-
+
+   ```json
+   {
+       "rule_name": "rule1",
+       "rule_expression": "((age > 21 AND salary > 30000) OR experience > 5)"
+   }
+-
+
+   ```json
+   {
+       "rule_name": "rule1",
+       "rule_expression": "((age > 21 AND salary > 30000) OR (experience > 5 AND rating > 4))"
+   }
+-
+
+    ```json
+   {
+       "rule_name": "rule1",
+       "rule_expression": "(((age > 21 AND salary > 30000) OR (experience > 5 AND rating > 4)) AND education == 'Bachelor')"
+   }
+-
+
+    ```json
+   {
+       "rule_name": "rule1",
+       "rule_expression": "(((age > 21 AND salary > 30000) OR (experience > 5 AND rating > 4)) AND (education == 'Bachelor' OR degree == 'Master'))
+   }
+  
+---
 
 if the rule is:
 rule1 = "((age > 30 AND department = 'Sales') OR (age < 25 AND department = 'Marketing')) AND (salary > 50000 OR experience > 5)"
 
 The response body would be the AST Node of the newly created rule (i.e, AST node of rule1 in this case).
 
-**Note:** Place the parenthesis correctly while creating rules just as shown above. You have to place a default parenthesis within double inverted commas around the whole expression or else the parse_token function won't be able to process the entire expression.
+### Note: Please be very careful when placing parentheses while creating the rule expression. If there is no operator and only an operand, do not place parentheses. In simple words, parentheses will be used only if your rule expression has operator involved in between the two operands. Don't use parentheses if there is only one operand. Incorrect placement of parentheses won't be processed by the parse_tokens function correctly which will cause IndexError or ValueError. You can refer the above provided json code to create expressions easily.
 
 6. For rule combination, use the POST method, and your URL would probably look like `http://127.0.0.1:5000/combine_rule` with the request body as:
 
