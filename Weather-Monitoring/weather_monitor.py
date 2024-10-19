@@ -79,7 +79,7 @@ def save_summary(daily_summary, db_path):
         if summary['alert']:
             print(summary['alert'])  
     # print(daily_summary)
-    print(f"Inserted data for cities: {', '.join(daily_summary.keys())}")  # Debug output
+    print(f"\nInserted data for cities: {', '.join(daily_summary.keys())}")  # Debug output
 
     conn.commit()  # Ensure changes are committed
     conn.close()
