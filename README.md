@@ -18,10 +18,10 @@ Each project folder contains two files:
 
 Currently, the repository contains the following two projects:
 
-### 1. AST_Engine
-The `AST-_Engine` project demonstrates the use of Abstract Syntax Trees (AST) in Python for creating, combining, and evaluating rules. The rules are parsed using an AST engine built with data structures, including a 'Node' structure, and evaluated against the provided input.
+### 1. AST-Engine
+The `AST-Engine` project demonstrates the use of Abstract Syntax Trees (AST) in Python for creating, combining, and evaluating rules. The rules are parsed using an AST engine built with data structures, including a 'Node' structure, and evaluated against the provided input.
 
-### 2. Weather_Monitoring
+### 2. Weather-Monitoring
 The `Weather-Monitoring` project enables users to monitor the weather conditions of six major Indian metro cities by fetching real-time data from an external API.
 
 ---
