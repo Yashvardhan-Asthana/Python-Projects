@@ -1,6 +1,6 @@
 # AST Engine Project
 
-## [Click here to launch the demo in browser](https://mybinder.org/v2/gh/Yashvardhan-Asthana/Python-Projects/main?urlpath=lab/tree/AST-Engine/app.py)
+## [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Yashvardhan-Asthana/Python-Projects/main?urlpath=proxy/AST-Engine/app.py)
 
 ## What This Project Is About
 
