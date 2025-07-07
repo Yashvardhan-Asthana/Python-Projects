@@ -1,5 +1,7 @@
 # AST Engine Project
 
+## [Click here to launch the demo in browser](https://mybinder.org/v2/gh/Yashvardhan-Asthana/Python-Projects/main?urlpath=lab/tree/AST-Engine/app.py)
+
 ## What This Project Is About
 
 The AST Engine project is a Flask-based web application designed to create, combine, and evaluate logical rules using an Abstract Syntax Tree (AST). The project features a simulated in-memory database to store rules and provides APIs for rule creation, combination, and evaluation. Users can define rules using string expressions, which are tokenized and parsed into an AST structure for processing.
